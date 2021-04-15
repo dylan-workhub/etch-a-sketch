@@ -1,0 +1,49 @@
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+aside{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+
+#slider-wrap{
+    display:flex;
+    flex-direction:column;
+}
+
+#etch-wrapper{
+    display:flex;
+    flex-direction:column;
+    background-color:black;
+    height:64vmin;
+    width:64vmin;
+    gap:1px;
+    border:1px solid black;
+}
+
+.row{
+    display:flex;
+    flex-direction:row;
+    height:4vmin;
+    gap:1px;
+}
+
+.column{
+    width:4vmin;
+    background-color:#fbf7f5;
+}
+
+body{
+    height:100%;
+    width:100%;
+}
+
+html{
+    height:100%;
+    width:100%;
+}
