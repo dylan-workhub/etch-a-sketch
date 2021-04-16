@@ -20,7 +20,6 @@ function drawOnGrid(){
     let divList = document.querySelectorAll('.column');
     divList.forEach((div) => {
         if(isRainbow){
-            console.log('israinbow');
             div.addEventListener('mouseover', function(e){
                 let randRed = Math.floor((Math.random() * 256) + 1);
                 let randBlue = Math.floor((Math.random() * 256) + 1);
@@ -48,7 +47,6 @@ function gridSize(){
         etchRow = document.createElement('div');
         etchRow.classList.add('row');
         etchRow.style.height = `${64 / newGridNum}vmin`;
-        console.log(etchRow.style.height);
         etchWrapper.appendChild(etchRow);
         for(let j = 0; j < newGridNum; j++){
             etchColumn = document.createElement('div');
@@ -62,12 +60,14 @@ function gridSize(){
 };
 
 //check for rainbow
-function rainbow(){
+function rainbowPen(){
     if(isRainbow){
         isRainbow = false;
+        rainbowBtn.innerHTML = 'Rainbow Cursor <br/> (toggle)';
     }
     else{
         isRainbow = true;
+        rainbowBtn.innerHTML = 'Regular Cursor <br/> (toggle)';
     }
     drawOnGrid();
 }
@@ -93,6 +93,6 @@ drawOnGrid();
 //button stuff
 resetBtn.addEventListener('click', gridReset);
 
-rainbowBtn.addEventListener('click', rainbow);
+rainbowBtn.addEventListener('click', rainbowPen);
 
 tileBtn.addEventListener('click', gridSize);
