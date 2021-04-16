@@ -47,12 +47,10 @@ button:hover{
 .row{
     display:flex;
     flex-direction:row;
-    height:4vmin;
     gap:1px;
 }
 
 .column{
-    width:4vmin;
     background-color:#fbf7f5;
 }
 

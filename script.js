@@ -47,10 +47,13 @@ function gridSize(){
     for(let i = 0; i < newGridNum; i++){
         etchRow = document.createElement('div');
         etchRow.classList.add('row');
+        etchRow.style.height = `${64 / newGridNum}vmin`;
+        console.log(etchRow.style.height);
         etchWrapper.appendChild(etchRow);
         for(let j = 0; j < newGridNum; j++){
             etchColumn = document.createElement('div');
             etchColumn.classList.add('column');
+            etchColumn.style.width = `${64 / newGridNum}vmin`;
             etchRow.appendChild(etchColumn);
         }
     }
@@ -73,10 +76,12 @@ function rainbow(){
 for(let i = 0; i < 16; i++){
     etchRow = document.createElement('div');
     etchRow.classList.add('row');
+    etchRow.style.height = `${64 / 16}vmin`;
     etchWrapper.appendChild(etchRow);
     for(let x = 0; x < 16; x++){
         etchColumn = document.createElement('div');
         etchColumn.classList.add('column');
+        etchColumn.style.width = `${64 / 16}vmin`;
         etchRow.appendChild(etchColumn);
     }
 }
